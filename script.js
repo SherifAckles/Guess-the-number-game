@@ -69,5 +69,10 @@ document.addEventListener("keydown", function (e) {
   console.log(e.key);
   if (e.key === "Enter") {
     check.click();
+    
+  }
+  //add Esc key function to trigger the again btn
+  if (e.key === "Escape") {
+    again.click();
   }
 });
