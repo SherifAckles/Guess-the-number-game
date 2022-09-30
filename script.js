@@ -3,7 +3,7 @@
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
-let check = document.querySelector(".check");
+const check = document.querySelector(".check");
 let again = document.querySelector(".again");
 
 const displayMessage = function (message) {
@@ -48,6 +48,7 @@ check.addEventListener("click", function () {
   }
 });
 // again btn to reset the game
+
 again.addEventListener("click", function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -60,4 +61,13 @@ again.addEventListener("click", function () {
 
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").style.width = "15rem";
+});
+
+//add enter key function to trigger the check btn
+document.addEventListener("keydown", function (e) {
+  console.log("key was preesed");
+  console.log(e.key);
+  if (e.key === "Enter") {
+    check.click();
+  }
 });
