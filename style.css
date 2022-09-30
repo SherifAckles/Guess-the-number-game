@@ -83,16 +83,17 @@ h1 {
 }
 
 .Description {
-  position: absolute;
-  right: 75rem;
-  top: 2rem;
-  align-items: center;
+  position: relative;
+   left: 75rem;
+   top: 2rem;  
   text-align: center;
   width: 15rem;
   height: 5rem;
   font-size: large;
   font-weight: 600;
   border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 99;
 }
 
 .guess {
@@ -130,4 +131,12 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+ 
+  .Description, .between{
+    position: absolute;
+    left: 22rem;
+  }
 }
